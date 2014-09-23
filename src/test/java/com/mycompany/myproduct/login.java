@@ -17,7 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class login
 {
 
- 	  //private WebDriver driver;
+ 	  private WebDriver driver;
 	  private String baseUrl;  
 
 	@Test
