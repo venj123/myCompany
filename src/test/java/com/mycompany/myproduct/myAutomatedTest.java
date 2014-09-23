@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class myAutomatedTest
 {
-
+     @Test
 	public void myAutomatedTest() 
 	{
 		
