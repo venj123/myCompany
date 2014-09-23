@@ -16,12 +16,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class login
 {
-	  private String resultado = null;
-	  private String nota = null;
+
  	  private WebDriver driver;
-	  private String baseUrl;
-	  private boolean acceptNextAlert = true;
-	  private StringBuffer verificationErrors = new StringBuffer();
+	  private String baseUrl;  
 
 	@Test
 	public void login() 
@@ -51,9 +48,9 @@ public class login
 		} catch (Error e) {
 			System.out.println("Login test failed");
 			
-			Assert.assertTrue( false );
-			nota = e.getMessage();
-			verificationErrors.append(e.toString());
+			//Assert.assertTrue(false);
+			//e.getMessage();
+			
 		}
 		
 	    
