@@ -25,7 +25,7 @@ public class login
 	{
 		Assert.assertNotNull( System.currentTimeMillis() );
 		
-		System.out.println("login working");
+		System.err.println("login working");
 
 		driver = new FirefoxDriver();
  	        baseUrl = "http://www.hotmail.com";
@@ -37,11 +37,11 @@ public class login
 			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
 					.matches("^[\\s\\S]*Keep me signed inzfx[\\s\\S]*$"));
 
-			System.out.println("Login test passed");
+			System.err.println("Login test passed");
 			Assert.assertTrue( System.currentTimeMillis() > 0 );
 
 		} catch (Error e) {
-			System.out.println("Login test failed");
+			System.err.println("Login test failed");
 			
 			//Assert.assertTrue(false);
 			e.printStackTrace();
