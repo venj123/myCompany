@@ -15,12 +15,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	
 	<scm>
-		<connection>scm:git:git://github.com/kinow/jenkins-testlink-plugin-tutorial.git</connection>
-		<developerConnection>scm:git:git@github.com:kinow/jenkins-testlink-plugin-the-definitive-guide.git</developerConnection>
-		<url>http://github.com/kinow/jenkins-testlink-plugin-tutorial</url>
+		<connection>scm:git:git://github.com/venj123/myCompany.git</connection>
+		<developerConnection>scm:git:git@github.com:venj123/myCompany.git</developerConnection>
+		<url>http://github.com/venj123/myCompany.git</url>
 	</scm>
 
 	<build>
