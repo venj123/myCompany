@@ -10,7 +10,7 @@ public class myAutomatedNegativeTest
 	public void myAutomatedNegativeTest() 
 	{
 		
-		Assert.assertFalse( System.currentTimeMillis() > 0 );
+		Assert.assertFalse( System.currentTimeMillis() < 0 );
 	}
 	
 }
