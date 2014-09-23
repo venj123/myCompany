@@ -1,0 +1,196 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<inceptionYear>2014</inceptionYear>
+	
+	<groupId>com.collabnet.venkatj</groupId>
+	<artifactId>jenkins-testlink-selenium-triangle</artifactId>
+	<name>Jenkins TestLink Plug-in reference architecture</name>        
+	<version>0.3-SNAPSHOT</version>
+	<description>Jenkins TestLink Selenium reference architecture</description>
+
+	<url>http://wiki.jenkins-ci.org/display/JENKINS/TestLink+Plugin</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	
+	<scm>
+		<connection>scm:git:git://github.com/kinow/jenkins-testlink-plugin-tutorial.git</connection>
+		<developerConnection>scm:git:git@github.com:kinow/jenkins-testlink-plugin-the-definitive-guide.git</developerConnection>
+		<url>http://github.com/kinow/jenkins-testlink-plugin-tutorial</url>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.agilejava.docbkx</groupId>
+				<artifactId>docbkx-maven-plugin</artifactId>
+				<version>2.0.11</version>
+				
+				<configuration>
+					<sourceDirectory>${basedir}/src/</sourceDirectory>
+					<includes>book.xml</includes>
+					<generatedSourceDirectory>${project.build.directory}/book/generated/en</generatedSourceDirectory>
+					<xincludeSupported>true</xincludeSupported>
+					<highlightSource>1</highlightSource>
+
+					<fop1Extensions>1</fop1Extensions>
+					<foCustomization>src/main/book/stylesheets/style.xsl</foCustomization>
+					<targetDirectory>${project.build.directory}/book/en/</targetDirectory>
+					<postProcess>
+						<copy todir="${basedir}/target/book/media">
+							<fileset dir="${basedir}/src/main/book/media/">
+								<include name="**/*.css" />
+								<include name="**/*.png" />
+								<include name="**/*.gif" />
+								<include name="**/*.jpg" />
+							</fileset>
+						</copy>
+					</postProcess>
+					<additionalClasspathElements>
+            <additionalClasspathElement>${basedir}/src/test/resources/cfg</additionalClasspathElement>
+          </additionalClasspathElements>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.docbook</groupId>
+						<artifactId>docbook-xml</artifactId>
+						<version>4.4</version>
+						<type>pom</type>
+						<scope>runtime</scope>
+					</dependency>
+					<dependency>
+						<groupId>net.sf.offo</groupId>
+						<artifactId>fop-hyph</artifactId>
+						<version>1.2</version>
+						<type>jar</type>
+						<scope>runtime</scope>
+					</dependency>
+					<dependency>
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+						<version>4.8.1</version>
+					</dependency>
+                                        <dependency>
+						<groupId>org.testng</groupId>
+						<artifactId>testng</artifactId>
+						<version>6.8.7</version>
+					</dependency>
+
+					<dependency>
+						<groupId>org.seleniumhq.selenium</groupId>
+						<artifactId>selenium-server</artifactId>
+						<version>2.42.2</version>
+					</dependency>
+
+					
+					<dependency>
+						<groupId>xmlrpc</groupId>
+						<artifactId>xmlrpc</artifactId>
+						<version>2.0.1</version>
+					</dependency>
+
+					<dependency>
+						<groupId>org.apache.xmlrpc</groupId>
+						<artifactId>xmlrpc-client</artifactId>
+						<version>3.1.2</version>
+                                        </dependency>
+					<dependency>
+						<groupId>org.apache.xmlrpc</groupId>
+						<artifactId>xmlrpc-common</artifactId>
+						<version>3.1.2</version>
+                                        </dependency>
+                                        <dependency>
+						<groupId>br.eti.kinoshita</groupId>
+						<artifactId>testlink-java-api</artifactId>
+						<version>1.9.8-0</version>
+					</dependency>
+					<dependency>
+						<groupId>xml-apis</groupId>
+						<artifactId>xml-apis</artifactId>
+						<version>1.4.01</version>
+</dependency>
+
+
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+				<source>1.6</source>
+				<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
+							<dependency>
+								<groupId>org.testng</groupId>
+								<artifactId>testng</artifactId>
+								<version>6.2.1</version>
+								<scope>test</scope>
+							</dependency>
+							<dependency>
+								<groupId>junit</groupId>
+								<artifactId>junit</artifactId>
+								<version>4.8.1</version>
+							</dependency>
+		                                        <dependency>
+								<groupId>org.testng</groupId>
+								<artifactId>testng</artifactId>
+								<version>6.8.7</version>
+							</dependency>
+		
+							<dependency>
+								<groupId>org.seleniumhq.selenium</groupId>
+								<artifactId>selenium-server</artifactId>
+								<version>2.42.2</version>
+							</dependency>
+
+							
+							<dependency>
+								<groupId>xmlrpc</groupId>
+								<artifactId>xmlrpc</artifactId>
+								<version>2.0.1</version>
+							</dependency>
+		
+							<dependency>
+								<groupId>org.apache.xmlrpc</groupId>
+								<artifactId>xmlrpc-client</artifactId>
+								<version>3.1.2</version>
+		                                        </dependency>
+							<dependency>
+								<groupId>org.apache.xmlrpc</groupId>
+								<artifactId>xmlrpc-common</artifactId>
+								<version>3.1.2</version>
+                                       			 </dependency>
+                                       			<dependency>
+								<groupId>br.eti.kinoshita</groupId>
+								<artifactId>testlink-java-api</artifactId>
+								<version>1.9.8-0</version>
+							</dependency>
+							<dependency>
+							        <groupId>testlink-api-client</groupId>
+							        <artifactId>testlink-api-client</artifactId>
+							       <scope>system</scope>
+
+							        <version>2.0</version>
+							        <systemPath>/u1/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven_3.2.1/lib/testlink-api-client-2.0.jar</systemPath>
+							    </dependency>
+							    <dependency>
+							    	<groupId>xml-apis</groupId>
+							    	<artifactId>xml-apis</artifactId>
+							    	<version>1.4.01</version>
+</dependency>
+
+
+
+	</dependencies>
+	
+</project>
