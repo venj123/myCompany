@@ -53,10 +53,10 @@ public class login
 		
 
 		try {
-			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
+			Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
 					.matches("^[\\s\\S]*My Workspacedzfx[\\s\\S]*$"));
 			System.out.println("passed");
-			Assert.assertTrue( System.currentTimeMillis() > 0 );
+			//Assert.assertTrue( System.currentTimeMillis() > 0 );
 
 		} catch (Error e) {
 			System.out.println("failed");
