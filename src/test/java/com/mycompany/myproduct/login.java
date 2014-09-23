@@ -9,10 +9,6 @@ import org.testng.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import testlink.api.java.client.TestLinkAPIResults;
-import testlink.api.java.client.TestLinkAPIClient;
-import testlink.api.java.client.TestLinkAPIException;
-
 
 /**
  * Test login to some website
@@ -26,20 +22,13 @@ public class login
 	  private String baseUrl;
 	  private boolean acceptNextAlert = true;
 	  private StringBuffer verificationErrors = new StringBuffer();
-	  
-		//final String DEVKEY = "c3ec77835ff0f63da1faae2b526e552f";
-		//final String URL = "http://localhost:8081/testlink-1.9.10/lib/api/xmlrpc/v1/xmlrpc.php";
-		//final String PROJETO = "testproj1";
-		//final String PLANO = "testplan1";
-		//final String BUILD = "build1";
-		//final String CASO_TESTE1 = "test_selenium";
 
 	@Test
 	public void login() 
 	{
 		Assert.assertNotNull( System.currentTimeMillis() );
 		
-		System.out.println("login3 working");
+		System.out.println("login working");
 
 		driver = new FirefoxDriver();
  	        baseUrl = "https://trialzone.collab.net/";
@@ -53,13 +42,14 @@ public class login
 		
 
 		try {
-			Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
+			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
 					.matches("^[\\s\\S]*My Workspacedzfx[\\s\\S]*$"));
-			System.out.println("passed");
-			//Assert.assertTrue( System.currentTimeMillis() > 0 );
+
+			System.out.println("Login test passed");
+			Assert.assertTrue( System.currentTimeMillis() > 0 );
 
 		} catch (Error e) {
-			System.out.println("failed");
+			System.out.println("Login test failed");
 			
 			Assert.assertTrue( false );
 			nota = e.getMessage();
