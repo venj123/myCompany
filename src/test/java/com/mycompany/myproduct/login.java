@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class login{
 
@@ -17,12 +18,12 @@ public class login{
 
 		WebDriver driver=new FirefoxDriver();
 	
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("http://www.hotmail.com");
+        	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        	driver.get("http://www.hotmail.com");
                 
         try {
 			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
-					.matches("^[\\s\\S]*Keep me signed inaaaaaaaaaaaa[\\s\\S]*$"));
+					.matches("^[\\s\\S]*Keep me signed in[\\s\\S]*$"));
 
 			System.err.println("Login test passed");
 			Assert.assertTrue( System.currentTimeMillis() > 0 );
