@@ -1,41 +1,28 @@
 package com.mycompany.myproduct;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import static org.junit.Assert.assertTrue;
+
 import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+public class login{
 
-
-/**
- * Test login to some website
- * 
- */
-public class login
-{
-
- 	  private WebDriver driver;
-	  private String baseUrl;  
 
 	@Test
-	public void login() 
-	{
-		Assert.assertNotNull( System.currentTimeMillis() );
-		
-		System.err.println("login working");
+	public static void main(String[] args) {
 
-		driver = new FirefoxDriver();
- 	        baseUrl = "http://www.hotmail.com";
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	        driver.get(baseUrl);
-		
-
-		try {
+		WebDriver driver=new FirefoxDriver();
+	
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.get("http://www.hotmail.com");
+                
+        try {
 			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
-					.matches("^[\\s\\S]*Keep me signed in[\\s\\S]*$"));
+					.matches("^[\\s\\S]*Keep me signed inaaaaaaaaaaaa[\\s\\S]*$"));
 
 			System.err.println("Login test passed");
 			Assert.assertTrue( System.currentTimeMillis() > 0 );
@@ -47,8 +34,6 @@ public class login
 			e.printStackTrace();
 			
 		}
-		
-	    
 	}
 	
 }
