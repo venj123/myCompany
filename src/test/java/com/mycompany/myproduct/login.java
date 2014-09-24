@@ -35,7 +35,7 @@ public class login
 
 		try {
 			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
-					.matches("^[\\s\\S]*Keep me signed inzfx[\\s\\S]*$"));
+					.matches("^[\\s\\S]*Keep me signed in[\\s\\S]*$"));
 
 			System.err.println("Login test passed");
 			Assert.assertTrue( System.currentTimeMillis() > 0 );
