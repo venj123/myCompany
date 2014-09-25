@@ -26,7 +26,7 @@ public class login{
 			driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Keep me signed in[\\s\\S]*$");
 
 			//System.err.println("Login test passed");
-			//Assert.assertTrue( System.currentTimeMillis() > 0 );
+			Assert.assertTrue( System.currentTimeMillis() > 0 );
 
 		} catch (Error e) {
 			e.printStackTrace();
