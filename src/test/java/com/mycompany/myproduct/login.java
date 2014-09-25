@@ -18,9 +18,10 @@ public class login{
 
 		WebDriver driver=new FirefoxDriver();
 	
-        	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         	driver.get("http://www.hotmail.com");
-                
+                driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
         try {
 			assertTrue(driver.findElement(By.cssSelector("BODY")).getText()
 					.matches("^[\\s\\S]*Keep me signed in[\\s\\S]*$"));
