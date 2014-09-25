@@ -10,7 +10,7 @@ public class myAutomatedNegativeTest
 	public void myAutomatedNegativeTest() 
 	{
 		
-		Assert.assertTrue( true );
+		Assert.assertTrue(false);
 	}
 	
 }
