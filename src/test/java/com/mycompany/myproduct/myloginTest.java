@@ -32,7 +32,7 @@ public class myloginTest{
 			e.printStackTrace();
 			System.err.println("Login test failed");
 			
-			//Assert.assertTrue(false);						
+			Assert.assertTrue(false);						
 		}
 	}
 	
