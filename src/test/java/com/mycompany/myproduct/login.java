@@ -15,7 +15,7 @@ public class login{
 	@Test
 	public static void main(String[] args) {
 
-		WebDriver driver=new FirefoxDriver();
+		WebDriver driver=new FirefoxDriver()
 	
         	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         	driver.get("http://www.hotmail.com");
