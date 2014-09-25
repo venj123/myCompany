@@ -31,7 +31,7 @@ public class login{
 		} catch (Error e) {
 			System.err.println("Login test failed");
 			
-			//Assert.assertTrue(false);
+			Assert.assertTrue(false);
 			e.printStackTrace();
 			
 		}
