@@ -44,7 +44,7 @@ public class ExportedJavaWebDriver {
 		selenium.stop();
 	}
 	
-	/*@Test
+	@Test
 	public static void main(String[] args)  {
 
 		com.mycompany.myproduct.ExportedJavaWebDriver executeMe = new com.mycompany.myproduct.ExportedJavaWebDriver();
@@ -58,5 +58,5 @@ public class ExportedJavaWebDriver {
 			e.printStackTrace();
 		}
 	
-	}*/
+	}
 }
