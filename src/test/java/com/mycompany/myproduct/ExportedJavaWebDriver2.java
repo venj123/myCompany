@@ -26,9 +26,9 @@ public class ExportedJavaWebDriver2 {
   public void testExportedJavaWebDriver2() throws Exception {
     driver.get(baseUrl + "/sf/sfmain/do/home");
     driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("venkatj");
+    driver.findElement(By.id("username")).sendKeys("test123");
     driver.findElement(By.id("pwd")).clear();
-    driver.findElement(By.id("pwd")).sendKeys("Collabnet10!");
+    driver.findElement(By.id("pwd")).sendKeys("abcdefghijk");
     driver.findElement(By.cssSelector("strong")).click();
     driver.findElement(By.xpath("(//a[contains(text(),'Sales Accelerated Feature Request')])[2]")).click();
     driver.findElement(By.cssSelector("a[title=\"Trackers\"] > span.text")).click();
